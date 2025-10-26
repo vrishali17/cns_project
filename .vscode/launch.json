@@ -2,14 +2,47 @@
   "version": "0.2.0",
   "configurations": [
     {
+<<<<<<< HEAD
+=======
+      "name": "(gdb) Bash on Windows Attach",
+      "type": "cppdbg",
+      "request": "attach",
+      "program": "enter program name, for example ${workspaceFolder}/a.exe",
+      "processId": "${command:pickRemoteProcess}",
+      "pipeTransport": {
+        "debuggerPath": "/usr/bin/gdb",
+        "pipeProgram": "${env:windir}\\system32\\bash.exe",
+        "pipeArgs": ["-c"],
+        "pipeCwd": ""
+      },
+      "setupCommands": [
+          {
+              "description": "Enable pretty-printing for gdb",
+              "text": "-enable-pretty-printing",
+              "ignoreFailures": true
+          },
+          {
+              "description": "Set Disassembly Flavor to Intel",
+              "text": "-gdb-set disassembly-flavor intel",
+              "ignoreFailures": true
+          }
+      ]
+    },
+    {
+>>>>>>> bff3128 (frontend of thr cns project)
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
+<<<<<<< HEAD
       "cwd": "c:/Users/DELL/OneDrive/Pictures/OneDrive/Attachments/Desktop/New folder (2)/cns_project",
       "program": "c:/Users/DELL/OneDrive/Pictures/OneDrive/Attachments/Desktop/New folder (2)/cns_project/build/Debug/outDebug",
+=======
+      "cwd": "c:/Users/DELL/OneDrive/Pictures/OneDrive/Attachments/Desktop/New folder (2)",
+      "program": "c:/Users/DELL/OneDrive/Pictures/OneDrive/Attachments/Desktop/New folder (2)/build/Debug/outDebug",
+>>>>>>> bff3128 (frontend of thr cns project)
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
